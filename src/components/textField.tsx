@@ -10,7 +10,7 @@ export const TextField: React.FC<Props> = (props) => {
 
     return(
 
-    <Input placeholder="Basic usage" value={props.text} onChange={(event) => props.handleChange(event.target.value)} size="lg"/>
+    <Input placeholder="Enter Item" value={props.text} onChange={(event) => props.handleChange(event.target.value)} size="lg"/>
         
     )
 }
