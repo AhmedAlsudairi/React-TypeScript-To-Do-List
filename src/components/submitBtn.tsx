@@ -12,6 +12,6 @@ export const SubmitBtn: React.FC<Props> = (props) => {
     }
     
     return(
-        <Button onClick={(event)=>{handleClick(event)}} colorScheme="blue" variant={'ghost'}>Submit</Button>
+        <Button onClick={(event)=>{handleClick(event)}} colorScheme="blue" >Submit</Button>
     )
 }
