@@ -10,7 +10,7 @@ interface Props {
 export const Item: React.FC<Props> = (props) => {
 
     return (
-        <Box bg="tomato" w="100%" p={4} color="white" onClick={()=>props.handleClick(props.id)} >
+        <Box bg="deepskyblue" w="100%" p={4} color="white" onClick={()=>props.handleClick(props.id)} >
             {props.children}
         </Box>
     )

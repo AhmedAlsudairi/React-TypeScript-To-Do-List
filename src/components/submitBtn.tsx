@@ -4,6 +4,7 @@ interface Props{
     handleClick: () => void
 }
 
+
 export const SubmitBtn: React.FC<Props> = (props) => {
 
     const handleClick = (event: React.MouseEvent) => {
@@ -11,6 +12,6 @@ export const SubmitBtn: React.FC<Props> = (props) => {
     }
     
     return(
-        <Button onClick={(event)=>{handleClick(event)}} colorScheme="blue">Submit</Button>
+        <Button onClick={(event)=>{handleClick(event)}} colorScheme="blue" variant={'ghost'}>Submit</Button>
     )
 }

@@ -16,12 +16,15 @@ function App() {
 
   const submitItem = () => {
     setText('');
+    if(text !== '')
     setItems([...items, text]);
 }
 
 const removeItem = (id: number) => {
   console.log(id);
-  setItems([...items, text]);
+  const newItems: string[] = items.filter((item,index)=> index !== id);
+
+  setItems([...newItems]);
 }
   return (
     <Container maxW="xl" centerContent>
