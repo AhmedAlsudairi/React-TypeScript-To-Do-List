@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { TextField } from './components/textField';
 import { SubmitBtn } from './components/submitBtn';
+import {Stack, Heading, Box, Container} from '@chakra-ui/react'
 function App() {
   const [items, setItems] = useState<string []>([])
   const [text, setText] = useState<string>('')
@@ -17,19 +18,24 @@ function App() {
     setItems([...items, text]);
 }
   return (
-    <div className="App">
-      <br></br>
-      <h1>To Do List</h1>
+    <Container maxW="xl" centerContent>
+  <Box padding="4" bg="gray.100" maxW="3xl">
+  <Stack spacing={3}>
+      <Heading>To Do List</Heading>
+
       <TextField text={text} handleChange={(text)=>{handleChange(text)}}/>
-      <br></br>
+      
       <SubmitBtn handleClick={submitItem}/>
-      <br></br>
-      <div>
+      
+      
         {items.map((item,index)=>
           <h6 key={index}>{item}</h6>
         )}
-      </div>
-    </div>
+      </Stack>
+  </Box>
+</Container>
+
+    
   );
 }
 

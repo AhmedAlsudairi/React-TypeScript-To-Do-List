@@ -1,5 +1,5 @@
 import React, { ChangeEventHandler, useState } from 'react';
-
+import {Button} from '@chakra-ui/react'
 interface Props{
     handleClick: () => void
 }
@@ -11,6 +11,6 @@ export const SubmitBtn: React.FC<Props> = (props) => {
     }
     
     return(
-        <button onClick={(event)=>{handleClick(event)}}>submit</button>
+        <Button onClick={(event)=>{handleClick(event)}} colorScheme="blue">Submit</Button>
     )
 }
